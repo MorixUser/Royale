@@ -1,0 +1,26 @@
+<div ng-include src="'pages/navbarInner.html'"></div>
+    <div class="home-menu-container">
+            
+             <div data-role="collapsible" class="ui-navigation-link menu">
+                <h3 ui-sref="history" ><span class="fl">{{'navigationAccounthistory' | translate}}</span> <div class="fr"><i class="material-icons md-40">chevron_right</i></div><div class="clearfix"></div></h3>
+            </div>
+            <div data-role="collapsible" class="ui-navigation-link menu">
+                <h3 ui-sref="changepw"><span class="fl">{{'navigationAccountdata' | translate}}</span> <div class="fr"><i class="material-icons md-40">chevron_right</i></div><div class="clearfix"></div></h3>
+            </div>
+            <div data-role="collapsible" class="ui-navigation-link menu">
+                <h3 ui-sref="userdata"><span class="fl">{{'navigationUserdata' | translate}}</span> <div class="fr"><i class="material-icons md-40">chevron_right</i></div><div class="clearfix"></div></h3>
+            </div>
+            <div data-role="collapsible" class="ui-navigation-link menu">
+                <h3 ui-sref="personallimits"><span class="fl">{{'personallimits' | translate}}</span> <div class="fr"><i class="material-icons md-40">chevron_right</i></div><div class="clearfix"></div></h3>
+            </div>
+            <div data-role="collapsible" class="ui-navigation-link menu" ng-if="onlinepayment && payinallowed">
+                <h3 ui-sref="payinpage"><span class="fl">{{'navigationPayin' | translate}}</span> <div class="fr"><i class="material-icons md-40">chevron_right</i></div><div class="clearfix"></div></h3>
+            </div>
+            <div data-role="collapsible" class="ui-navigation-link menu" ng-if="onlinepayment && payoutallowed">
+                <h3 ui-sref="payoutpage"><span class="fl">{{'navigationPayout' | translate}}</span> <div class="fr"><i class="material-icons md-40">chevron_right</i></div><div class="clearfix"></div></h3>
+            </div>
+
+            <div data-role="collapsible" class="ui-navigation-link menu">
+                <h3><span ng-click="doLogout()" class="fl">{{'navLogout' | translate}}</span> <div class="fr"><i class="material-icons md-40">chevron_right</i></div><div class="clearfix"></div></h3>
+            </div>
+    </div>

@@ -1,0 +1,109 @@
+<div ng-include src="'pages/navbarInner.html'"></div>
+<div ng-controller="searchCtrl as search">
+
+
+            <div ng-repeat="(key,value) in items | groupBy:'tn' track by $index" class="">
+              <div class="tournament-head" ng-if="currentPage!=key">{{key}}</div>
+              <div data-role="collapsible" class="ui-navigation-link" ng-repeat="item in value" style="max-height: inherit;">
+                  <div ng-if="(!sportId || sportId==0)" class="item-minute fl" ng-class="{true: 'blue-bg', false: 'gray-bg'}[item.gs!='NotStarted']">
+                      <div ng-hide="item.mp == '0'" class="live-minute-allsports">
+                          {{item.mp}}'
+                      </div>
+                      <div ng-show="item.mp == '0' && item.gs != 'NotStarted'" class="live-minute-allsports">
+                          {{item.gs | translate}}
+                      </div>
+                      <span ng-show="item.mp == '0' && item.gs == 'NotStarted'" class="live-date-allsports">
+                          <div><div class="matchdate match-date-allsports">{{ item.gd | matchDateFilter }}</div></div>
+                          <div><div class="matchtime">{{ item.gd | matchTimeFilter }}</div></div>
+                      </span>
+                      <div class="live-sportname">{{getsportname(item.sid)}}</div>
+                  </div>
+                  <div ng-if="(sportId && sportId>0)" class="item-minute fl item-minute-onesport" ng-class="{true: 'blue-bg', false: 'gray-bg'}[item.gs!='NotStarted']">
+                      <div ng-hide="item.mp == '0'" class="live-minute-onsport-div">
+                          {{item.mp}}'
+                      </div>
+                      <div ng-show="item.mp == '0' && item.gs != 'NotStarted'" class="live-minute-onsport-div">
+                          {{item.gs | translate}}
+                      </div>
+                      <span ng-show="item.mp == '0' && item.gs == 'NotStarted'" class="live-date-onesport">
+                          <div><div class="matchdate">{{ item.gd | matchDateFilter }}</div></div>
+                          <div><div class="matchtime">{{ item.gd | matchTimeFilter }}</div></div>
+                      </span>
+                  </div>
+
+                  <div class="teams fl">
+                      <div class="fl red-card" ng-show="item.t1rc > 0">{{item.t1rc}}</div> <span class="{{ item.t1n.length>25 ?'live-teamsize1' : 'live-teamsize2' }}">{{ item.t1n }}</span> <br />
+                      <div class="fl red-card" ng-show="item.t2rc > 0">{{item.t2rc}}</div> <span class="{{ item.t2n.length>25 ?'live-teamsize1' : 'live-teamsize2' }}">{{item.t2n}}</span>
+                  </div>
+
+
+                  <div class="fr tc live-ss-container" ng-if="item.gs != 'NotStarted'">
+                      <div class="live-ss-container-row"><span class="score-highlighted">{{item.t1s}}</span><span class="score" ng-repeat="ss in item.setscores | orderBy:'id'">{{ss.home}} </span></div>
+                      <div class="live-ss-container-row"><span class="score-highlighted">{{item.t2s}}</span><span class="score" ng-repeat="ss in item.setscores | orderBy:'id'">{{ss.away}} </span></div>
+                  </div>
+                  <div class="clearfix"></div>
+
+                  <div class="fl tips-title-container tip-text-live-one" ng-if="netsports.indexOf(item.sid)<0">
+                      <div class="tc tipp-txt-live"><span>{{'tip' | translate}}</span></div>
+                  </div>
+                  <div class="fl tips-title-container tip-text-live-one" ng-if="netsports.indexOf(item.sid)>=0">
+                      <div class="tc tipp-txt-live"><span>{{'2way' | translate}}</span></div>
+                  </div>
+
+                  <!-- 3way -->
+                  <div class="fl live-tips-container onesport" ng-if="netsports.indexOf(item.sid)<0">
+                      <div class="tipp-left threeway">
+                          <div class="tipp {{item.tip12.ac}} {{item.tip12.higher}} {{isTipSelected('control', item.tip12.id) ? 'selected' : ''}}" style="margin-left: 5px;" ng-click="addTip(item.gid,item.tip12.id,true)">
+                              <div class="fl">1</div>
+                              <div class="fr odd">{{item.tip12.odd| oddFilter }}</div>
+                              <div class="clearfix"></div>
+                          </div>
+                      </div>
+                      <div class="tipp-left threeway">
+                          <div class="tipp {{item.tipx2.ac}} {{item.tipx2.higher}} {{isTipSelected('control', item.tipx2.id) ? 'selected' : ''}}" ng-click="addTip(item.gid,item.tipx2.id,true)">
+                              <div class="fl">x</div>
+                              <div class="fr odd">{{item.tipx2.odd| oddFilter }}</div>
+                              <div class="clearfix"></div>
+                          </div>
+                      </div>
+                      <div class="tipp-left threeway">
+                          <div class="tipp {{item.tip22.ac}} {{item.tip22.higher}} {{isTipSelected('control', item.tip22.id) ? 'selected' : ''}}" ng-click="addTip(item.gid,item.tip22.id,true)">
+                              <div class="fl">2</div>
+                              <div class="fr odd">{{item.tip22.odd | oddFilter }}</div>
+                              <div class="clearfix"></div>
+                          </div>
+                      </div>
+
+                  </div>
+
+                  <!-- 2way -->
+                  <div class="fl live-tips-container onesport" ng-if="netsports.indexOf(item.sid)>=0">
+                      <div class="tipp-left twoway">
+                          <div class="tipp {{item.tip12.ac}} {{item.tip12.higher}} {{isTipSelected('control', item.tip12.id) ? 'selected' : ''}}" style="margin-left: 5px;" ng-click="addTip(item.gid,item.tip12.id,true)">
+                              <div class="fl">1</div>
+                              <div class="fr odd">{{item.tip12.odd| oddFilter }}</div>
+                              <div class="clearfix"></div>
+                          </div>
+                      </div>
+                      <div class="tipp-left twoway">
+                          <div class="tipp {{item.tip22.ac}} {{item.tip22.higher}} {{isTipSelected('control', item.tip22.id) ? 'selected' : ''}}" ng-click="addTip(item.gid,item.tip22.id,true)">
+                              <div class="fl">2</div>
+                              <div class="fr odd">{{item.tip22.odd | oddFilter }}</div>
+                              <div class="clearfix"></div>
+                          </div>
+                      </div>
+
+                  </div>
+
+                  <div class="fr live-sp-button tc">
+                      <div class="specialbet fr" ng-click="loadSpecial(item);" ui-sref="specialbets({gameId: item.gid, mId: item.mid, gs: item.gs})">
+                          <div class="specialbet-text">+ {{item.cb}} </div>
+                      </div>
+                  </div>
+                  <div class="clearfix"></div>
+              </div>
+
+
+          </div>
+
+</div>

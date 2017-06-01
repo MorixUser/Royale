@@ -1,0 +1,72 @@
+
+  <md-content layout-padding>
+    <div id="registerForm">
+     <form name="userForm">
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>{{'amount' | translate }} (TL)</label>
+        <input required ng-model="user.amount">
+          <div ng-messages="userForm.amount.$error">
+              <div ng-message="required">{{'required'|translate}}</div>
+          </div>
+      </md-input-container>
+
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>{{'receiver_name' | translate}}</label>
+        <input required ng-model="user.name"> 
+        <div ng-messages="userForm.name.$error">
+            <div ng-message="required">{{'required'|translate}}</div>
+        </div>
+      </md-input-container>
+
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>{{'personal_id' | translate}}</label>
+            <input required ng-model="user.personalid">
+            <div ng-messages="userForm.personalid.$error">
+                <div ng-message="required">{{'required'|translate}}</div>
+            </div>
+        </md-input-container>
+
+       
+         <md-input-container class="md-block" flex-gt-sm>
+             <label>{{'receiver_phone_number' | translate}}</label>
+             <input required ng-model="user.phonenumber">
+             <div ng-messages="userForm.phonenumber.$error">
+                 <div ng-message="required">{{'required'|translate}}</div>
+             </div>
+         </md-input-container>
+
+         
+
+         <label style="color: rgba(0, 0, 0, 0.38);">{{'LabelBirthday' | translate}}</label>
+         <md-datepicker ng-model="user.bdate" md-max-date="maxDate"></md-datepicker>
+         
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>{{ 'bankname' | translate }}</label>
+        <md-select required ng-model="user.bank">
+         <md-option ng-repeat="bank in banks" value="{{bank.name}}">{{ bank.name }}</md-option>
+       </md-select>
+       <div ng-messages="userForm.bank.$error">
+           <div ng-message="required">{{'required'|translate}}</div>
+      </div>
+    </md-input-container>
+
+         <md-input-container class="md-block" flex-gt-sm>
+             <label>{{'bank_branch' | translate}}</label>
+             <input required ng-model="user.account1">
+             <div ng-messages="userForm.account1.$error">
+                 <div ng-message="required">{{'required'|translate}}</div>
+             </div>
+         </md-input-container>
+         <md-input-container class="md-block" flex-gt-sm>
+             <label>{{'bank_accountnbr' | translate}}</label>
+             <input required ng-model="user.account2">
+             <div ng-messages="userForm.account2.$error">
+                 <div ng-message="required">{{'required'|translate}}</div>
+             </div>
+         </md-input-container>
+
+
+         <md-button class="md-raised md-primary" ng-click="requestPayment(user)">{{'submit' | translate}}</md-button>
+  </form>
+</div>
+</md-content>

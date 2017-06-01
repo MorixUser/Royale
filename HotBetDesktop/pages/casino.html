@@ -1,0 +1,58 @@
+﻿<head>
+    <link rel="stylesheet" href="css/casino/mainCasino.css" />
+
+    <link rel="stylesheet" href="css/casino.css?4" />
+	<script type="text/javascript" src="config/gwtgamelist.js"></script>
+
+    <style>
+        #appPageHeader{
+            box-shadow: none;
+        }
+        .header-padding {
+            padding-top: 0px!important;
+        }
+        .contentwrap {
+            min-width: inherit;
+            max-width: inherit;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap" ng-controller="casinoCtrl">
+
+        <div class="casinoView">
+            
+            <section id="mobile-content" class="oh">
+                
+                <div class="cat-tab-cont fl">
+                    <div class="cat-tab fl" ng-repeat="cat in categories" ng-class="currentCat==cat.id?'cat-tab-selected':''" ng-click="onClickCat(cat);">{{cat.name | translate}}</div>
+                    <div class="cat-tab fl">
+                        <input type="text" class="cas-search" placeholder="{{'SEARCHFORGAMES' | translate}}" ng-model="searchCasino" ng-model-options="{ debounce: 500 }" ng-change="setViewItems()" />
+                    </div>
+                </div>
+
+
+
+                <div class="casino-games-cont casino-common-cont fl" id="gamecnt">
+                    <div ng-include="currentTab" class="casino-content-{{contentClass}}"></div>
+                </div>
+
+
+                
+
+
+
+        </section>
+
+
+        
+    </div>
+
+
+
+
+    </div>
+  
+    
+</body>

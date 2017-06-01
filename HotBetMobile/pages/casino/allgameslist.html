@@ -1,0 +1,11 @@
+<div class="casino-game" ng-repeat="item in viewitems | filter:searchCasino">
+	<a>
+		<img src="{{item.imgsrc}}" ng-if="item.options.length > 1" ng-click="showOptions($index)" />
+		<img src="{{item.imgsrc}}" ng-hide="item.options.length > 1" ng-click="openGame(item);" />
+		<div ng-if="item.options.length > 1" class="tableCont hidden" id="table{{$index}}"> 
+			<p ng-repeat="option in item.options" class="tables" 
+			ng-click="openGame(item);">{{option.caption | translate}}</p>
+		</div>
+		<p>{{item.viewtitle}}</p>
+	</a>
+</div>

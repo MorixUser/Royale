@@ -1,0 +1,88 @@
+﻿<div ng-controller="landingPageCtrl as landingPage">
+    <div class="register-bar" ng-hide="isLoggedin">
+        <div class="register-text fl">
+            {{'registrationtext1'|translate}}
+        </div>
+        <div class="register-button fl" ui-sref="register">
+            {{'registrationtext2'|translate}}
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!-- SLIDER START -->
+    <div id="slider">
+        <ul rn-carousel class="image">
+            <li ng-repeat="item in slideItems">
+                <div class="matches" style="background:url('{{sliderurl}}{{item.brMatchID}}.png') no-repeat top center;background-size: 100% !important;">
+                    <div class="slider-teamnames">
+                        {{item.team1}} - {{item.team2}}
+                    </div>
+                    <div class="slider-tips" ng-repeat="tips in item.tips">
+                        {{tips.od}}
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- SLIDER END -->
+
+    <!-- CONTENT/SPORT ITEMS SLIDER -->
+    <div id="content-slider">
+        <div class="content-slider-container">
+            <div class="content-slider-tabs">
+                <div ng-repeat="tab in sliderTabs" ng-class="{true:'active', false:''}[currentTab == tab.id]" ng-click="changeTab(tab)">{{tab.name}}</div>
+            </div>
+            <div class="content-slider">
+                <div class="content-item" ng-repeat="item in items" ng-click="goSpecialBet(item.gid,item.mid,item.gs);">
+                   <div class="content-date">
+                       {{ item.gd | matchTimeFilter }}
+                   </div>
+                    <div class="content-teams">
+                        <div>{{ item.t1n }}</div>
+                        <div>vs</div>
+                        <div>{{ item.t2n }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="live-title-container homepage-leagues livesportsbg">
+        <div class="homepage-leagues-bg frame">
+            <ul class="slidee"></ul>
+        </div>
+    </div>
+    <!-- CONTENT/SPORT ITEMS SLIDER -->
+    <div class="landing-menu-container" id="homemenue" style="margin-top:10px;">
+        <div class="land-menu-container">
+            <div class="landing-menu" ui-sref="sportbets">
+                <span data-resource="navigationSportbets" class="">{{'SPORTS' | translate
+                       }}</span>
+            </div>
+            <div class="landing-menu" ui-sref="livebets">
+                <span data-resource="navigationSportbets">{{'LIVE' | translate}}</span>
+            </div>
+            <div ng-if="usecasino && casinoallowed" data-role="collapsible" class="landing-menu" ng-click="gotoCasino()">
+                <span data-resource="navigationCasino">{{'Casino' | translate}}</span>
+            </div>
+
+            <div class="landing-menu" ui-sref="results">
+                <span data-resource="navigationSportbets">{{'RESULTS' | translate}}</span>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        setTimeout(function () {
+            jQuery('.bxslider').show().bxSlider({
+                auto: true,
+                infiniteLoop: true,
+                controls: false
+            });
+
+        },50);
+       
+    });
+     
+</script>

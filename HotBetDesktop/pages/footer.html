@@ -1,0 +1,83 @@
+﻿<footer ng-controller="bottommenuCtrl as bottomMenu" class="footer2">
+	<div class="footer-toggle" ng-click="footerToggled=!footerToggled;">{{'legal_notice'|translate}}</div>
+    <div class="footer-content" ng-class="footerToggled?'toggled':''" ng-click="footerToggled=!footerToggled;">
+        <div class="footerLinks">
+            <div class="footerCol3">
+                <span class="whiteColor">{{'the_company' | translate}}</span>
+                <ul>
+                    <li><a class="whiteColor" href="" ui-sref="infopage({page:'/info/{lang}/about/index.html', name:'about'})">{{'about' | translate}}</a></li>
+                    <li><a class="whiteColor" href="" ui-sref="infopage({page:'/info/{lang}/impressum/index.html', name:'Imprint'})">{{'Imprint' | translate}}</a></li>
+                    <li><a class="whiteColor" href="" ui-sref="mail">{{'contact' | translate}}</a></li>
+                </ul>
+            </div>
+            <div class="footerCol3">
+                <span class="whiteColor">{{'INFORMATIONS'|translate}}</span>
+                <ul>
+                    <li><a class="whiteColor" href="" ui-sref="infopage({page:'/info/{lang}/agb/index.html', name:'termsandconditions'})">{{'termsandconditions' | translate}}</a></li>
+                    <li><a class="whiteColor" href="" ui-sref="infopage({page:'/info/{lang}/payment/index.html', name:'franchise'})">{{'paymentoptions'|translate}}</a></li>
+                    <li><a class="whiteColor" href="" ui-sref="infopage({page:'/info/{lang}/responsibility/index.html', name:'responsibility'})">{{'responsibility' | translate}}</a></li>
+                    <li><a class="whiteColor" href="" ui-sref="infopage({page:'/info/{lang}/rules/index.html', name:'rules'})">{{'rules' | translate}}</a></li>
+                </ul>
+            </div>
+            <div class="footerCol3">
+                <span class="whiteColor">{{'responsibility_and_security' | translate}}</span>
+                <ul>
+                    <li><a class="whiteColor" href="https://www.gamblingtherapy.org/" target="_blank">Gambling Theraphy</a></li>
+                    <li><a class="whiteColor" href="" ui-sref="infopage({page:'/info/{lang}/LegalAge/index.html', name:'legalage'})">{{'legalage' | translate}}</a></li>
+                    <li><a class="whiteColor" href="" ui-sref="infopage({page:'/info/{lang}/Security/index.html', name:'security'})">{{'security' | translate}}</a></li>
+                </ul>
+            </div>
+            <div class="footerCol3">
+                <span class="whiteColor">Royal Software Ltd</span><br />
+                <div class="whiteColor" style="font-size: 15px;">Royal Software Limited, Suite A, Triq Mater Boni Consilii, Paola</div>
+                <div class="whiteColor" style="font-size: 15px;">
+                    PLA 1610 - Paola, Malta (EU) is regulated by the Malta Gaming Authority with the license number MGA/CL2/___/____
+                    <br />
+                    (Sportsbetting) issued on the _th of ___ ____
+                    <br />
+                    MGA/Class 1/___/____ (Casino) issued on the __.__.____
+                    <br />
+                    MBIT Limited wholly owns and operates the betting website <b>mbit24.com</b>
+                </div>
+            </div>
+            <div style="clear: both"></div>
+            
+        </div>
+        <div class="borderTopWhite">
+        </div>
+        <div class="footerImages">
+            <div style="margin-top: 20px; margin-bottom: 20px;">
+                <img src="images/pmt/Skrill.png" />
+                <img src="images/pmt/ecopayz.png" />
+                <img src="images/pmt/sofortbanking.png" />
+                <img src="images/pmt/astropay.png" />
+                <img src="images/pmt/ukash.png" />
+                <img src="images/pmt/paysafecard.png" />
+                <img src="images/pmt/neteller.png" />
+                <a href="https://www.rapidssl.com/" target="_blank" style="margin-top: -52px;">
+                    <img class="LA" src="images/rapidssl_ssl_certificate.gif" style="border: none;" alt="">
+                </a>
+                <a target="_blank" href="https://www.authorisation.mga.org.mt/verification.aspx?lang=en&amp;company=_&amp;details=1">
+                    <img class="LA" src="images/mga-logo.png" style="border: none;" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="borderTopWhite">
+        </div>
+
+        <div style="width: 85%; margin-left: auto; margin-right: auto;">
+            <span style="color: #5a5a5a!important; float: left; font-size: 36px; margin-top: -4px; padding-right: 5px;">!</span>
+            <p style="margin-bottom: 3px; margin-top: 3px; margin-bottom: 3px; margin-top: 3px; font-size: 0.95em; color: #5a5a5a!important; font-weight: bolder;">
+                Warning: Gaming involves risk. By gambling on this web site, you run the risk that you may lose money or suffer psychological injuries.
+            </p>
+            <p style="margin-bottom: 3px; margin-top: 3px; margin-bottom: 3px; margin-top: 3px; font-size: 0.85em; color: #5a5a5a!important; font-weight: bolder;">
+                You gamble at your own risk. Members must be 18 or over. Estonian players must be 21 or over.
+            </p>
+            <p style="margin-bottom: 3px; margin-top: 3px; margin-bottom: 3px; margin-top: 3px; font-size: 0.75em; color: #5a5a5a!important;">
+                It is the individual's responsibility to ensure that any activity with us does not breach the laws relating to betting of the country where the individual is based. Under no circumstances will Nesh Limited be liable for any breach of state or country law that may occur as a result of an individual's usage of our website. We reserve the right to close any such account and void all bets immediately if the opening of an account or the acceptance or processing of bets has taken place, mistakenly or otherwise
+            </p>
+        </div>
+    </div>
+    
+</footer>
+

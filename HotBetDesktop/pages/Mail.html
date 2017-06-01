@@ -1,0 +1,55 @@
+<div class="ui-content" ng-controller="mailCtrl">
+    <h1 style="text-align: center; line-height: 1.5em; color:#3a96bd; ">{{'contact'|translate}}</h1>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="inputEmail" class="control-label col-xs-2"><label for="from">{{'from'|translate}}</label> : </label>
+                <div class="col-xs-9">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input class="form-control" data-val="true" data-val-length="Das Feld &amp;quot;von&amp;quot; muss eine Zeichenfolge mit der Mindestl&amp;#228;nge 1 und der H&amp;#246;chstl&amp;#228;nge 50 sein." data-val-length-max="50" data-val-length-min="1" data-val-regex="bitte geben Sie eine g&amp;#252;ltige E-Mailaddresse ein." data-val-regex-pattern="[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|com|COM|org|ORG|net|NET|edu|EDU|gov|GOV|mil|MIL|biz|BIZ|info|INFO|mobi|MOBI|name|NAME|aero|AERO|asia|ASIA|jobs|JOBS|museum|MUSEUM)\b" data-val-required="bitte geben Sie eine g&amp;#252;ltige E-Mailaddresse ein." id="from" name="from" type="text" value="" ng-model="model.from">
+                        <span class="field-validation-valid" data-valmsg-for="from" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail" class="control-label col-xs-2"><label for="subject">{{'subject'|translate}}</label> : </label>
+                <div class="col-xs-9">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
+                        <input class="form-control" data-val="true" data-val-length="Das Feld &amp;quot;Betreff&amp;quot; muss eine Zeichenfolge mit der Mindestl&amp;#228;nge 1 und der H&amp;#246;chstl&amp;#228;nge 100 sein." data-val-length-max="100" data-val-length-min="1" data-val-required="Bitte eingeben:" id="subject" name="subject" type="text" value="" ng-model="model.subject">
+                        <span class="field-validation-valid" data-valmsg-for="subject" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <label for="inputEmail" class="control-label col-xs-2"><label for="message">{{'message'|translate}}</label> : </label>
+                <div class="col-xs-9">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
+                        <textarea class="form-control" data-val="true" data-val-length="Das Feld &amp;quot;Nachricht&amp;quot; muss eine Zeichenfolge mit der Mindestl&amp;#228;nge 1 und der H&amp;#246;chstl&amp;#228;nge 10000 sein." data-val-length-max="10000" data-val-length-min="1" data-val-required="Bitte eingeben:" id="message" name="message" rows="4" style="width:96.5%" ng-model="model.mailbody"></textarea>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-3 col-sm-9">
+                    <button type="submit" class="btn btn-default pull-right" style="margin-right:27px;" ng-click="send(model)">{{'submit'|translate}}</button>
+                </div>
+            </div>
+
+
+
+            <label style="text-align:center;">{{mailmessage}}</label>
+
+        </div>
+    </div>
+
+
+</div>

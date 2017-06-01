@@ -1,0 +1,21 @@
+
+   
+  <md-content layout-padding ng-controller="loginCtrl as login" class="loginBackground">
+    <div id="loginForm">
+        <form name="userForm">
+            <div style="width:100%; overflow:hidden;" layout="column">
+                <input type="text" class="login-input login-userbg" ng-model="user.userName" placeholder="{{'username' | translate}}" autocapitalize="off" autocomplete="off" flex>
+            </div>
+            <div style="width:100%; overflow:hidden;" layout="column">
+                <input type="password" class="login-passbg login-input" placeholder="{{'password' | translate}}" ng-model="user.password" autocapitalize="off" autocomplete="off" flex>
+            </div>
+
+            <div class="login-subfunctions">
+                <div class="fl"><input type="checkbox" ng-model="user.rememberlogin" />{{'remember_login' | translate}}</div>
+                <div ui-sref="password_recovery" class="fr"><span data-resource="navigationSportbets">{{'forgot_password' | translate}}</span></div>
+            </div>
+
+            <md-button class="md-raised md-primary login-btn" ng-click="getLogin(user)">{{'login' | translate}}</md-button>
+        </form>
+    </div>
+</md-content>

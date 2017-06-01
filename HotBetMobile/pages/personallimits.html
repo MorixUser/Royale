@@ -1,0 +1,61 @@
+<div ng-include src="'pages/navbarInner.html'"></div>
+<md-content layout-padding ng-controller="personalLimitCtrl as account">
+    <div id="registerForm">
+
+        
+
+        <br />
+        <div class="col-md-2">
+            <span>{{'stake_limit' | translate}} ({{limits.currency}}):</span> <input ng-model="limits.StakeValue" class="fr" style="width: 40%;text-align: right;" />
+            <div class="clearfix"></div>
+            <select ng-model="limits.StakeTimeRangeType" class="fr">
+                <option value="0" ng-selected="limits.StakeTimeRangeType==0">{{'no_limit' | translate}}</option>
+                <option value="1" ng-selected="limits.StakeTimeRangeType==1">{{'per_hour' | translate}}</option>
+                <option value="2" ng-selected="limits.StakeTimeRangeType==2">{{'per_day' | translate}}</option>
+                <option value="3" ng-selected="limits.StakeTimeRangeType==3">{{'per_week' | translate}}</option>
+                <option value="4" ng-selected="limits.StakeTimeRangeType==4">{{'per_month' | translate}}</option>
+            </select>
+        </div>
+        <div class="clearfix"></div>
+        <br />
+        <div class="col-md-2">
+            <div style="width: 40%;float: left;">{{'maxstakepersession' | translate}} ({{limits.currency}}):</div> <input ng-model="limits.StakeSessionValue" class="fr" style="width: 40%;text-align: right;" />
+        </div>
+        <div class="clearfix"></div>
+        <br />
+        <div class="col-md-2">
+            <span>{{'loss_limit' | translate}} ({{limits.currency}}):</span> <input ng-model="limits.LossValue" class="fr" style="width: 40%;text-align: right;" />
+            <div class="clearfix"></div>
+            <select ng-model="limits.LossTimeRangeType" class="fr">
+                <option value="0" ng-selected="limits.LossTimeRangeType==0">{{'no_limit' | translate}}</option>
+                <option value="1" ng-selected="limits.LossTimeRangeType==1">{{'per_hour' | translate}}</option>
+                <option value="2" ng-selected="limits.LossTimeRangeType==2">{{'per_day' | translate}}</option>
+                <option value="3" ng-selected="limits.LossTimeRangeType==3">{{'per_week' | translate}}</option>
+                <option value="4" ng-selected="limits.LossTimeRangeType==4">{{'per_month' | translate}}</option>
+            </select>
+        </div>
+        <div class="clearfix"></div>
+
+
+
+        <br />
+
+        <div class="col-md-2">
+            <span>{{'lock_account' | translate}}?</span>
+            <select ng-model="limits.LockedTimeRangeType" class="fr">
+                <option value="0" ng-selected="limits.LockedTimeRangeType==0">{{'dont_lock' | translate}}</option>
+                <option value="4" ng-selected="limits.LockedTimeRangeType==4">{{'lock_account' | translate}}</option>
+            </select>
+
+        </div>
+        <div class="clearfix"></div>
+
+        <br />
+        <div class="col-md-2">
+            <button ng-click="savelimits()" style="width:100%;">{{'save' | translate}}</button>
+        </div>
+        <div class="clearfix"></div>
+
+
+    </div>
+</md-content>

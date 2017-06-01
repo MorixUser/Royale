@@ -1,0 +1,82 @@
+<div ng-controller="transactionsCtrl">
+    
+
+
+    <div id="ticketdataform">
+        <fieldset>
+            <legend>{{'timerange' | translate}}</legend>
+
+            <table>
+                <tr ng-hide="filterMode=='simple'">
+                    <td class="site-default-value-column"> &nbsp;</td>
+                    <td class="site-default-value-column">{{'from' | translate}}</td>
+                    <td class="site-default-value-column">{{'to' | translate}}</td>
+                    <td class="site-default-value-column">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td class="site-default-lable-column">
+                        <select name="SelectedType" class="site-default-dropdown" ng-model="filterMode">
+                            <option value="simple">{{'by_month' | translate}}</option>
+                            <option value="extended">{{'by_date' | translate}}</option>
+                        </select>
+                    </td>
+                    <td class="site-default-value-column" id="monthselection" ng-show="filterMode=='simple'">
+                        <select name="SelectedMonth" class="site-default-dropdown" ng-model="selectedMonth">
+                            <option value="0">{{'last_month'|translate}}</option>
+                            <option value="1">{{'last_three_months'|translate}}</option>
+                            <option value="2">{{'last_year'|translate}}</option>
+                            <option value="3">{{'all'|translate}}</option>
+                        </select>
+                    </td>
+                    <td class="site-default-value-column" id="fromdateselection" ng-hide="filterMode=='simple'">
+                        <input name="FromDate" type="text" id="datepickerfrom" ng-model="filter.fromDate" />
+                    </td>
+                    <td class="site-default-value-column" id="todateselection" ng-hide="filterMode=='simple'">
+                        <input name="ToDate" type="text" id="datepickerto" ng-model="filter.toDate" />
+                    </td>
+
+                    <td class="site-default-value-column">
+                        <md-button flex class="md-raised md-primary" ng-click="getTransactionByDate()">{{'refresh'|translate}}</md-button>
+                    </td>
+                </tr>
+            </table>
+
+        </fieldset>
+
+    </div>
+
+
+    <md-table-container>
+        <table md-table>
+            <tbody md-body>
+                <tr md-row ng-repeat="item in items" class="md-raised">
+                    <td md-cell style="padding:0px 15px !important; background:#ebebeb; color:#1087c9;width:10%;">{{item.date | ticketDateFilter}}</td>
+                    <td md-cell style="padding-left:5px !important; width:10%;">{{item.TransactionType | translate}}</td>
+                    <td md-cell style="padding: 0 23px 0 0 !important;"><span ng-class="{true:'green', false:'red'}[item.ispositive]">{{'amount' | translate }}: {{item.dValue}}</span></td>
+                    <td md-cell style="padding: 0 23px 0 0 !important;">{{ 'new_balance' | translate }}: {{item.newBalance}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </md-table-container>
+
+
+    <div style="clear:both;"></div>
+
+    <div class="ticketfooter">
+        <fieldset>
+            <legend style="margin-bottom: 5px;">{{'page'|translate}} {{currentPage}}/{{totalPages}}</legend>
+            <input type="button" ng-click="getTransactionByDate(1)" value="<<" />
+            <input type="button" ng-click="getTransactionByDate((currentPage-1))" value="<" />
+            <input type="button" ng-click="getTransactionByDate((currentPage+1))" value=">" />
+            <input type="button" ng-click="getTransactionByDate(totalPages)" value=">>" />
+            <select name="SelectedStatus" class="site-default-dropdown" ng-model="pageSize" ng-change="getTransactionByDate()" style="float:right; width:50px;">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>
+        </fieldset>
+    </div>
+
+</div>

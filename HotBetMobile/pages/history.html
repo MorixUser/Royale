@@ -1,0 +1,40 @@
+<div ng-include src="'pages/navbarInner.html'"></div>
+ <div class="filter-header-container" layout="row" ng-init="getTransactionByDate()">
+ 	<div ng-click="filterByDate ? filterByDate = false : filterByDate = true" flex>
+ 		<i class="material-icons bydate">date_range</i> {{'FilterTXT' | translate}}
+ 	</div>
+ </div>
+ <div ng-show="filterByDate" class="filter-date-form">
+ 	<form name="filterDate">
+ 		<md-content layout-padding layout="column">
+ 		 <div flex>
+        <label style="color: rgba(0, 0, 0, 0.38);" class="fl">{{'from' | translate}}</label>
+        <input type="date" ng-model="date.from" class="fr">
+        <div class="clearfix"></div>
+      </div>
+      <div flex>
+        <label style="color: rgba(0, 0, 0, 0.38);" class="fl">{{'to' | translate}}</label>
+         <input type="date" ng-model="date.to" class="fr">
+        <div class="clearfix"></div>
+      </div>
+
+		<md-button flex class="md-raised md-primary" ng-click="getTransactionByDate()">Submit</md-button>
+ 		</md-content>
+ 	</form>
+ </div>
+
+
+ <md-table-container>
+  <table md-table>
+    <tbody md-body>
+      <tr md-row ng-repeat="item in items" class="md-raised">
+        <td md-cell style="padding:0px 15px !important; background:#ebebeb; color:#1087c9;width:10%;">{{item.date | ticketDateFilter}}</td>
+          <td md-cell style="padding-left:5px !important; width:10%;"><br />{{item.TransactionType | translate}}</td>
+        <td md-cell style="padding: 0 23px 0 0 !important;"><span ng-class="{true:'green', false:'red'}[item.ispositive]">{{'amount' | translate }}:</span> <br /> {{ 'new_balance' | translate }}:</td>
+        <td md-cell style="padding: 0 23px 0 0 !important;"><span ng-class="{true:'green', false:'red'}[item.ispositive]">{{item.dValue}}</span><br /> {{item.newBalance}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</md-table-container>
+<md-table-pagination md-limit="pageSize"  md-page="pageNumber" md-page="pageNumber" md-total="{{totalItems}}" md-on-paginate="changeTransactPage" style="margin-bottom:100px;"></md-table-pagination>

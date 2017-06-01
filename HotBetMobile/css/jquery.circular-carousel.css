@@ -1,0 +1,35 @@
+.carousel .item {
+	display: block;
+	position: absolute;
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	transform: scale(0.8);
+}
+
+.carousel .item div{
+	display: none;
+}
+
+.carousel .item.active {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+}
+.carousel .item.active div{
+	display:block;
+    font-weight:bold;
+}
+.carousel .item.active img{
+	background: #1087c9;
+    padding: 4px;
+    margin-top: -10px;
+}
+
+.carousel .item.transition {
+	-webkit-transition: all 0.35s ease;
+	-moz-transition: all 0.35s ease;
+	-o-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}

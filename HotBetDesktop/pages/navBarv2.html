@@ -1,0 +1,75 @@
+﻿
+<header id="appPageHeader" data-role="header oh" data-theme="b" class="ui-no-background  ui-header ui-bar-b barheight" ng-controller="navbarCtrl as nav">
+    <style>
+        .ticket-details {
+            top: 260px;
+            left: -167px;
+            color: #000;
+            position: relative;
+        }
+    </style>
+    <div class="logowrap">
+        <a class="logo" href="#" ui-sref="{{startPageisDifferentThanLandingPage?startPage:'landingpage'}}"></a>
+    </div>
+    <!--<div class="logowrap2">&nbsp;</div>-->
+    <div class="mainmenuwrap">
+        <div class="menuItemWrap miSport">
+            <div>
+                <a class="menuItem" href="#" ui-sref-active="menuItemActive" ui-sref="hbsport">{{'SPORTS' | translate}}</a>
+                <!--<a class="menuItem" href="#" ui-sref-active="menuItemActive" ui-sref="hbsport">{{'SPORTS' | translate}} & {{'LIVE' | translate}}</a>-->
+            </div>
+        </div>
+        <div class="menuItemWrap miCasino">
+            <div>
+                <a class="menuItem" href="#" ui-sref-active="menuItemActive" ui-sref="casino">{{'Casino' | translate}}</a>
+            </div>
+        </div>
+        <div class="menuItemWrap miAccount">
+            <div>
+                <a class="menuItem" href="#" ui-sref-active="menuItemActive" ui-sref="account" ng-show="isLoggedin">{{'navAccount' | translate }}</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="loginwrap">
+        <md-menu md-position-mode="target-right target">
+            <div class="languageSelectorButton" style="float: right">
+                <a href="#" ng-click="$mdOpenMenu($event)"><i class="icon_lang lang_{{currentLang}}" aria-hidden="true" style="margin-right: 5px;"></i>{{currentLang}}</a>
+            </div>
+            <md-menu-content width="2" style="padding: 0">
+                <md-menu-item ng-repeat="item in langs" style="min-height: 30px;height: 30px;">
+                    <md-button ng-click="onSelectLang(item)" style="line-height: 20px;min-height: 20px">  <span class="icon_lang lang_{{item.short}}"></span>{{item.name | translate}}</md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+        <table ng-if="stateName!='login'" ng-controller="loginCtrl as login" style="float: right; vertical-align: top;" cellpadding="0" cellspacing="0" border="0">
+            <tr ng-if="!isLoggedin">
+                <td>
+                    <input type="text" name="loginUsername" class="headerLoginInput" ng-model="user.userName" placeholder="{{'username' | translate}}" autocapitalize="off" autocomplete="off" ng-keyup="checkEnter($event,'username')">
+                </td>
+                <td>
+                    <input type="password" name="loginPassword" class="headerLoginInput" placeholder="{{'password' | translate}}" ng-model="user.password" autocapitalize="off" autocomplete="off" ng-keyup="checkEnter($event,'pw')">
+                </td>
+                <td>
+                    <a class="loginButton" ng-click="getLogin(user)">{{'login' | translate }}</a>
+                </td>
+            </tr>
+            <tr ng-if="!isLoggedin">
+                <td><a href="#" class="menuItem" style="margin-left: 5px;" ui-sref="register">{{'REGISTER' | translate}}</a></td>
+                <td><a href="#" class="menuItem" style="margin-left: 5px;" ui-sref="password_recovery">{{'forgot_password' | translate}}</a></td>
+                <td></td>
+            </tr>
+            <tr ng-if="isLoggedin">
+                <td style="padding-top: 5px;">{{'balance' | translate}}: {{userBalance}}{{userSettings.Currency | currencyFilter}}</td>
+                <td>
+                    <a class="loginButton" style="top: 1px!important" ng-click="doLogout()">{{'logout' | translate }}</a>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="clearfix"></div>
+</header>
+<div class="header-padding"></div>

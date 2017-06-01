@@ -1,0 +1,87 @@
+﻿<html>
+<head>
+<title>Casino Wrapper</title>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+
+<script type="text/javascript"> 
+	
+	var SID = localStorage.getItem('ls.SID').replace('"','').replace('"','');
+	
+	function getURLParameter(name) {
+	  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+	}
+
+    function EXTERNAL_closeWindow()
+	{
+		history.back();
+	}
+	
+	function getParameterByName(name, url) {
+		if (!url) url = window.location.href;
+		name = name.replace(/[\[\]]/g, "\\$&");
+		var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			results = regex.exec(url);
+		if (!results) return null;
+		if (!results[2]) return '';
+		return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
+	
+	function loadScript(url, callback){
+
+		var script = document.createElement("script")
+		script.type = "text/javascript";
+
+		if (script.readyState){  //IE
+			script.onreadystatechange = function(){
+				if (script.readyState == "loaded" ||
+						script.readyState == "complete"){
+					script.onreadystatechange = null;
+					callback();
+				}
+			};
+		} else {  //Others
+			script.onload = function(){
+				callback();
+			};
+		}
+
+		script.src = url;
+		document.getElementsByTagName("head")[0].appendChild(script);
+	}
+	
+	var gpath  ='https://static.wazdanep.com/games/';
+	var qr = getParameterByName('src_path');
+	if(qr && qr.length>0)
+	{
+		gpath = qr;
+	}
+	
+	var gamename= getURLParameter('GameName');
+	
+	loadScript(gpath+gamename+"/"+gamename+".nocache.js", function(){});
+	
+	var link = document.createElement( "link" );
+	link.href = gpath+gamename+"/style.css";
+	link.type = "text/css";
+	link.rel = "stylesheet";
+	link.media = "screen,print";
+
+	document.getElementsByTagName( "head" )[0].appendChild( link );
+
+	
+
+	function wcloseWindow()
+	{
+		history.back();
+	}
+	</script>
+</script>
+	
+
+</head>
+<body style="margin: 0px; padding: 0px">
+ <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
+</body>
+</html>

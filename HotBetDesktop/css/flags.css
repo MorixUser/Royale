@@ -1,0 +1,938 @@
+.icon_sport {
+  background: url("../images/icons.png") no-repeat scroll 0 0 rgba(255, 255, 255, 0);
+  height: 19px;
+  margin: 0;
+  background-size: 18px;
+  width: 18px;
+  float: left;
+  margin-right: 3px;
+  margin-top:5px;
+}
+.sport-13 {
+    background-position: 0 -67px;
+}
+.sport-31 {
+    background-position: 0 -132px;
+}
+.sport-15 {
+    background-position: 0 -197px;
+}
+.sport-3 {
+  background-position: 0 -164px;
+}
+.sport-2 {
+       background-position: 0px -82px;
+}
+.sport-60 {
+    background-position: 0 -392px;
+}
+.sport-10 {
+    background-position: 0 -457px;
+}
+.sport-17 {
+    background-position: 0 -522px;
+}
+.sport-22 {
+    background-position: 0 -587px;
+}
+.sport-24 {
+    background-position: 0 -652px;
+}
+.sport-7 {
+    background-position: 0 -717px;
+}
+.sport-16 {
+    background-position: 0 -781px;
+}
+.sport-29 {
+    background-position: 0 -847px;
+}
+.sport-9 {
+    background-position: 0 -912px;
+}
+.sport-6 {
+background-position: 1px -28px;
+}
+.sport-4 {
+      background-position: 0 -273px;
+}
+.sport-11 {
+    background-position: 0 -1105px;
+}
+.sport-40 {
+    background-position: 0 -1105px;
+}
+.sport-12 {
+     background-position: 0 -293px;
+}
+.sport-19 {
+    background-position: 0 -1234px;
+}
+.sport-1 {  
+    background-position: 0px -243px;
+}
+.sport-54 {
+    background-position: 0 -1364px;
+}
+.sport-20 {
+    background-position: 0 -1429px;
+}
+.sport-5 {
+    background-position: 0 -137px;  
+}
+.sport-23 {
+      background-position: 0px -216px;
+}
+.sport-34 {
+    background-position: 0 -1559px;
+}
+.sport-26 {
+    background-position: 0 -1624px;
+}
+.sport-14 {
+    background-position: 0 -1689px;
+}
+.sport-28 {
+    background-position: 0 -1689px;
+}
+.sport-61 {
+    background-position: 0 -262px;
+}
+.sport-100 {
+    background-position: 0 -1692px;
+}
+.sport-44 {
+    background-position: 0 -1757px;
+}
+.sport-46 {
+    background-position: 0 -1822px;
+}
+.sport-43 {
+    background-position: 0 -1887px;
+}
+.sport-48 {
+    background-position: 0 -1954px;
+}
+.sport-67 {
+    background-position: 0 -2017px;
+}
+.sport-68 {
+    background-position: 0 -2082px;
+}
+.sport-65 {
+    background-position: 0 -2147px;
+}
+.sport-51 {
+    background-position: 0 -2212px;
+}
+.sport-49 {
+    background-position: 0 -2145px;
+}
+.sport-45 {
+    background-position: 0 -2274px;
+}
+.sport-47 {
+    background-position: 0 -2342px;
+}
+.sport-101 {
+    background-position: 0 -2407px;
+}
+.sport-69 {
+    background-position: 0 -2469px;
+}
+.sport-42 {
+    background-position: 0 -2534px;
+}
+.sport-70 {
+    background-position: 0 -2534px;
+}
+.sport-102 {
+    background-position: 0 -2602px;
+}
+.sport-50 {
+    background-position: 0 -2665px;
+}
+.sport-30 {
+    background-position: 0 -1821px;
+}
+.sport-100 {
+    background-position: 0 -2015px;
+}
+.sport-101 {
+    background-position: 0 -1105px;
+}
+.sport-105 {
+    background-position: 0 -2665px;
+}
+/*.x-tree-icon { display: none !important; }*/
+/* Ülke Bayrakları başlangıç */
+.icon_flag {
+background: url("../images/flags.png") no-repeat scroll left center transparent;
+    height: 20px;
+    width: 20px !important;
+    float: left;
+    position: relative;
+    top: 5px;
+}
+.icon_flagBig {
+  background: url("../images/flags.png") no-repeat scroll top center rgba(29, 29, 29, 0);
+  height: 11px;
+  margin: 0;
+  /* border-radius: 204px; */
+  padding: 1px;
+  width: 16px;
+  float: left;
+  /* display: inline-block; */
+  /* margin-right: 7px; */
+  margin-left: 56px;
+  margin-top: 13px;
+  margin-right: -52%;
+  /* background-size: 19px 16px; */
+  zoom: 1;
+  -webkit-transform: scale(1.2);
+  -webkit-transform-origin: 0 0;
+}
+.cc-ad {
+    background-position: 0 -5px;
+}
+.cc-ae {
+    background-position: 0 -36px;
+}
+.cc-af {
+    background-position: 0 -67px;
+}
+.cc-ag {
+    background-position: 0 -98px;
+}
+.cc-ai {
+    background-position: 0 -129px;
+}
+.cc-al {
+    background-position: 0 -160px;
+}
+.cc-am {
+    background-position: 0 -191px;
+}
+.cc-an {
+    background-position: 0 -222px;
+}
+.cc-ao {
+    background-position: 0 -253px;
+}
+.cc-ar {
+    background-position: 0 -284px;
+}
+.cc-as {
+    background-position: 0 -315px;
+}
+.cc-at {
+    background-position: 0 -346px;
+}
+.cc-au {
+    background-position: 0 -377px;
+}
+.cc-aw {
+    background-position: 0 -408px;
+}
+.cc-ax {
+    background-position: 0 -439px;
+}
+.cc-az {
+    background-position: 0 -470px;
+}
+.cc-ba {
+    background-position: 0 -501px;
+}
+.cc-bb {
+    background-position: 0 -532px;
+}
+.cc-bd {
+    background-position: 0 -563px;
+}
+.cc-be {
+    background-position: 0 -594px;
+}
+.cc-bf {
+    background-position: 0 -625px;
+}
+.cc-bg {
+    background-position: 0 -656px;
+}
+.cc-bh {
+    background-position: 0 -687px;
+}
+.cc-bi {
+    background-position: 0 -718px;
+}
+.cc-bj {
+    background-position: 0 -749px;
+}
+.cc-bm {
+    background-position: 0 -780px;
+}
+.cc-bn {
+    background-position: 0 -811px;
+}
+.cc-bo {
+    background-position: 0 -842px;
+}
+.cc-br {
+    background-position: 0 -873px;
+}
+.cc-bs {
+    background-position: 0 -904px;
+}
+.cc-bt {
+    background-position: 0 -935px;
+}
+.cc-bv {
+    background-position: 0 -966px;
+}
+.cc-bw {
+    background-position: 0 -997px;
+}
+.cc-by {
+    background-position: 0 -1028px;
+}
+.cc-bz {
+    background-position: 0 -1059px;
+}
+.cc-ca {
+    background-position: 0 -1090px;
+}
+.cc-cc {
+    background-position: 0 -1121px;
+}
+.cc-cd {
+    background-position: 0 -1152px;
+}
+.cc-cf {
+    background-position: 0 -1183px;
+}
+.cc-cg {
+    background-position: 0 -1214px;
+}
+.cc-ch {
+    background-position: 0 -1245px;
+}
+.cc-ci {
+    background-position: 0 -1276px;
+}
+.cc-ck {
+    background-position: 0 -1307px;
+}
+.cc-cl {
+    background-position: 0 -1338px;
+}
+.cc-cm {
+    background-position: 0 -1369px;
+}
+.cc-cn {
+    background-position: 0 -1400px;
+}
+.cc-co {
+    background-position: 0 -1431px;
+}
+.cc-cr {
+    background-position: 0 -1462px;
+}
+.cc-cs {
+    background-position: 0 -1493px;
+}
+.cc-cu {
+    background-position: 0 -1524px;
+}
+.cc-cv {
+    background-position: 0 -1555px;
+}
+.cc-cx {
+    background-position: 0 -1586px;
+}
+.cc-cy {
+    background-position: 0 -1617px;
+}
+.cc-cz {
+    background-position: 0 -1648px;
+}
+.cc-de {
+    background-position: 0 -1679px;
+}
+.cc-dj {
+    background-position: 0 -1710px;
+}
+.cc-dk {
+    background-position: 0 -1741px;
+}
+.cc-dm {
+    background-position: 0 -1772px;
+}
+.cc-do {
+    background-position: 0 -1803px;
+}
+.cc-dz {
+    background-position: 0 -1834px;
+}
+.cc-earth {
+    background-position: 0 -1865px;
+}
+.cc-ec {
+    background-position: 0 -1896px;
+}
+.cc-ee {
+    background-position: 0 -1927px;
+}
+.cc-eg {
+    background-position: 0 -1958px;
+}
+.cc-eh {
+    background-position: -36px -5px;
+}
+.cc-en {
+    background-position: -36px -36px;
+}
+.cc-er {
+    background-position: -36px -67px;
+}
+.cc-es {
+    background-position: -36px -98px;
+}
+.cc-et {
+    background-position: -36px -129px;
+}
+.cc-fam {
+    background-position: -36px -160px;
+}
+.cc-fi {
+    background-position: -36px -191px;
+}
+.cc-fj {
+    background-position: -36px -222px;
+}
+.cc-fk {
+    background-position: -36px -253px;
+}
+.cc-fm {
+    background-position: -36px -284px;
+}
+.cc-fo {
+    background-position: -36px -315px;
+}
+.cc-fr {
+    background-position: -36px -346px;
+}
+.cc-ga {
+    background-position: -36px -377px;
+}
+.cc-gb {
+    background-position: -36px -408px;
+}
+.cc-gd {
+    background-position: -36px -439px;
+}
+.cc-ge {
+    background-position: -36px -470px;
+}
+.cc-gh {
+    background-position: -36px -501px;
+}
+.cc-gi {
+    background-position: -36px -532px;
+}
+.cc-gl {
+    background-position: -36px -563px;
+}
+.cc-gm {
+    background-position: -36px -594px;
+}
+.cc-gn {
+    background-position: -36px -625px;
+}
+.cc-gp {
+    background-position: -36px -656px;
+}
+.cc-gq {
+    background-position: -36px -687px;
+}
+.cc-gr {
+    background-position: -36px -718px;
+}
+.cc-gs {
+    background-position: -36px -749px;
+}
+.cc-gt {
+    background-position: -36px -780px;
+}
+.cc-gu {
+    background-position: -36px -811px;
+}
+.cc-gw {
+    background-position: -36px -842px;
+}
+.cc-gy {
+    background-position: -36px -873px;
+}
+.cc-hk {
+    background-position: -36px -904px;
+}
+.cc-hn {
+    background-position: -36px -935px;
+}
+.cc-hr {
+    background-position: -36px -966px;
+}
+.cc-ht {
+    background-position: -36px -997px;
+}
+.cc-hu {
+    background-position: -36px -1028px;
+}
+.cc-id {
+    background-position: -36px -1059px;
+}
+.cc-ie {
+    background-position: -36px -1090px;
+}
+.cc-il {
+    background-position: -36px -1121px;
+}
+.cc-in {
+    background-position: -36px -1152px;
+}
+.cc-io {
+    background-position: -36px -1183px;
+}
+.cc-iq {
+    background-position: -36px -1214px;
+}
+.cc-ir {
+    background-position: -36px -1245px;
+}
+.cc-is {
+    background-position: -36px -1276px;
+}
+.cc-it {
+    background-position: -36px -1307px;
+}
+.cc-ja {
+    background-position: -36px -1338px;
+}
+.cc-jm {
+    background-position: -36px -1369px;
+}
+.cc-jo {
+    background-position: -36px -1400px;
+}
+.cc-jp {
+    background-position: -36px -1431px;
+}
+.cc-ke {
+    background-position: -36px -1462px;
+}
+.cc-kg {
+    background-position: -36px -1493px;
+}
+.cc-kh {
+    background-position: -36px -1524px;
+}
+.cc-ki {
+    background-position: -36px -1555px;
+}
+.cc-km {
+    background-position: -36px -1586px;
+}
+.cc-kn {
+    background-position: -36px -1617px;
+}
+.cc-kp {
+    background-position: -36px -1648px;
+}
+.cc-kr {
+    background-position: -36px -1679px;
+}
+.cc-kw {
+    background-position: -36px -1710px;
+}
+.cc-ky {
+    background-position: -36px -1741px;
+}
+.cc-kz {
+    background-position: -36px -1772px;
+}
+.cc-la {
+    background-position: -36px -1803px;
+}
+.cc-lb {
+    background-position: -36px -1834px;
+}
+.cc-lc {
+    background-position: -36px -1865px;
+}
+.cc-li {
+    background-position: -36px -1896px;
+}
+.cc-lk {
+    background-position: -36px -1927px;
+}
+.cc-lr {
+    background-position: -36px -1958px;
+}
+.cc-ls {
+    background-position: -72px -5px;
+}
+.cc-lt {
+    background-position: -72px -36px;
+}
+.cc-lu {
+    background-position: -72px -67px;
+}
+.cc-lv {
+    background-position: -72px -98px;
+}
+.cc-ly {
+    background-position: -72px -129px;
+}
+.cc-ma {
+    background-position: -72px -160px;
+}
+.cc-mc {
+    background-position: -72px -191px;
+}
+.cc-md {
+    background-position: -72px -222px;
+}
+.cc-me {
+    background-position: -72px -253px;
+}
+.cc-mg {
+    background-position: -72px -285px;
+}
+.cc-mh {
+    background-position: -72px -316px;
+}
+.cc-mk {
+    background-position: -72px -347px;
+}
+.cc-ml {
+    background-position: -72px -378px;
+}
+.cc-mm {
+    background-position: -72px -409px;
+}
+.cc-mn {
+    background-position: -72px -440px;
+}
+.cc-mo {
+    background-position: -72px -471px;
+}
+.cc-mp {
+    background-position: -72px -502px;
+}
+.cc-mq {
+    background-position: -72px -533px;
+}
+.cc-mr {
+    background-position: -72px -564px;
+}
+.cc-ms {
+    background-position: -72px -595px;
+}
+.cc-mt {
+    background-position: -72px -626px;
+}
+.cc-mu {
+    background-position: -72px -657px;
+}
+.cc-mv {
+    background-position: -72px -688px;
+}
+.cc-mw {
+    background-position: -72px -719px;
+}
+.cc-mx {
+    background-position: -72px -750px;
+}
+.cc-my {
+    background-position: -72px -781px;
+}
+.cc-mz {
+    background-position: -72px -812px;
+}
+.cc-n {
+    background-position: -36px -408px;
+}
+.cc-na {
+    background-position: -72px -843px;
+}
+.cc-nc {
+    background-position: -72px -874px;
+}
+.cc-ne {
+    background-position: -72px -905px;
+}
+.cc-nf {
+    background-position: -72px -936px;
+}
+.cc-ng {
+    background-position: -72px -967px;
+}
+.cc-ni {
+    background-position: -72px -998px;
+}
+.cc-nl {
+    background-position: -72px -1029px;
+}
+.cc-no {
+    background-position: -72px -1060px;
+}
+.cc-np {
+    background-position: -72px -1091px;
+}
+.cc-nr {
+    background-position: -72px -1122px;
+}
+.cc-nu {
+    background-position: -72px -1153px;
+}
+.cc-nz {
+    background-position: -72px -1184px;
+}
+.cc-om {
+    background-position: -72px -1215px;
+}
+.cc-pa {
+    background-position: -72px -1246px;
+}
+.cc-pe {
+    background-position: -72px -1277px;
+}
+.cc-pf {
+    background-position: -72px -1308px;
+}
+.cc-pg {
+    background-position: -72px -1339px;
+}
+.cc-ph {
+    background-position: -72px -1370px;
+}
+.cc-pk {
+    background-position: -72px -1401px;
+}
+.cc-pl {
+    background-position: -72px -1432px;
+}
+.cc-pm {
+    background-position: -72px -1463px;
+}
+.cc-pn {
+    background-position: -72px -1494px;
+}
+.cc-pr {
+    background-position: -72px -1525px;
+}
+.cc-ps {
+    background-position: -72px -1556px;
+}
+.cc-pt {
+    background-position: -72px -1587px;
+}
+.cc-pw {
+    background-position: -72px -1618px;
+}
+.cc-py {
+    background-position: -72px -1649px;
+}
+.cc-qa {
+    background-position: -72px -1680px;
+}
+.cc-ro {
+    background-position: -72px -1711px;
+}
+.cc-rs {
+    background-position: -72px -1742px;
+}
+.cc-ru {
+    background-position: -72px -1773px;
+}
+.cc-rw {
+    background-position: -72px -1804px;
+}
+.cc-s {
+    background-position: -72px -1835px;
+}
+.cc-sa {
+    background-position: -72px -1866px;
+}
+.cc-sb {
+    background-position: -72px -1897px;
+}
+.cc-sc {
+    background-position: -72px -1928px;
+}
+.cc-sd {
+    background-position: -72px -1959px;
+}
+.cc-se {
+    background-position: -108px -5px;
+}
+.cc-sg {
+    background-position: -108px -36px;
+}
+.cc-sh {
+    background-position: -108px -67px;
+}
+.cc-si {
+    background-position: -108px -98px;
+}
+.cc-sk {
+    background-position: -108px -129px;
+}
+.cc-sl {
+    background-position: -108px -160px;
+}
+.cc-sm {
+    background-position: -108px -191px;
+}
+.cc-sn {
+    background-position: -108px -222px;
+}
+.cc-so {
+    background-position: -108px -253px;
+}
+.cc-sr {
+    background-position: -108px -284px;
+}
+.cc-st {
+    background-position: -108px -315px;
+}
+.cc-sv {
+    background-position: -108px -346px;
+}
+.cc-sy {
+    background-position: -108px -377px;
+}
+.cc-sz {
+    background-position: -108px -408px;
+}
+.cc-tc {
+    background-position: -108px -439px;
+}
+.cc-td {
+    background-position: -108px -470px;
+}
+.cc-tf {
+    background-position: -108px -501px;
+}
+.cc-tg {
+    background-position: -108px -532px;
+}
+.cc-th {
+    background-position: -108px -563px;
+}
+.cc-tj {
+    background-position: -108px -594px;
+}
+.cc-tk {
+    background-position: -108px -625px;
+}
+.cc-tl {
+    background-position: -108px -656px;
+}
+.cc-tm {
+    background-position: -108px -687px;
+}
+.cc-tn {
+    background-position: -108px -718px;
+}
+.cc-to {
+    background-position: -108px -749px;
+}
+.cc-tr {
+    background-position: -108px -780px;
+}
+.cc-tt {
+    background-position: -108px -811px;
+}
+.cc-tv {
+    background-position: -108px -842px;
+}
+.cc-tw {
+    background-position: -108px -873px;
+}
+.cc-tz {
+    background-position: -108px -904px;
+}
+.cc-ua {
+    background-position: -108px -935px;
+}
+.cc-ug {
+    background-position: -108px -966px;
+}
+.cc-um {
+    background-position: -108px -997px;
+}
+.cc-us {
+    background-position: -108px -1028px;
+}
+.cc-uy {
+    background-position: -108px -1059px;
+}
+.cc-uz {
+    background-position: -108px -1090px;
+}
+.cc-va {
+    background-position: -108px -1121px;
+}
+.cc-vc {
+    background-position: -108px -1152px;
+}
+.cc-ve {
+    background-position: -108px -1183px;
+}
+.cc-vg {
+    background-position: -108px -1214px;
+}
+.cc-vi {
+    background-position: -108px -1245px;
+}
+.cc-vn {
+    background-position: -108px -1276px;
+}
+.cc-vu {
+    background-position: -108px -1307px;
+}
+.cc-w {
+    background-position: -108px -1338px;
+}
+.cc-wf {
+    background-position: -108px -1369px;
+}
+.cc-ws {
+    background-position: -108px -1400px;
+}
+.cc-ye {
+    background-position: -108px -1431px;
+}
+.cc-yt {
+    background-position: -108px -1462px;
+}
+.cc-yu {
+    background-position: -108px -1493px;
+}
+.cc-za {
+    background-position: -108px -1524px;
+}
+.cc-zh {
+    background-position: -108px -1555px;
+}
+.cc-zht {
+    background-position: -108px -1586px;
+}
+.cc-zm {
+    background-position: -108px -1617px;
+}
+.cc-zw {
+    background-position: -108px -1648px;
+}
+.cc-eu {
+    background-position: -108px -1680px;
+}

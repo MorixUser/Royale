@@ -1,0 +1,17 @@
+<div class="casino-game" ng-repeat="item in viewitems | filter:searchCasino">
+    <a>
+        <div ng-if="item.dealerId && item.dealerId != -1" class="dealer pa"><img src="https://games.grindergm.com/static/livegame-graphics/dealers/thumbs/{{item.dealerId}}.png"></div>
+        <div ng-if="item.dealer" class="table-opened pa">{{item.isOpened | translate}}</div>
+
+        <img src="{{item.imgsrc}}" ng-if="item.options.length > 1" />
+        <img src="{{item.imgsrc}}" ng-hide="item.options.length > 1" ng-click="openGame(item);" />
+        <div ng-if="item.options.length > 1" class="tableCont" id="table{{$index}}">
+            <p ng-repeat="option in item.options" class="tables"
+               ng-click="openGame(item,option);">{{option.caption | translate}}</p>
+        </div>
+        <p>{{item.viewtitle}}</p>
+    </a>
+
+    
+
+</div>

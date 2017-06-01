@@ -1,0 +1,18 @@
+
+  <md-content layout-padding ng-controller="recoverPWCtrl as register">
+  <div id="registerForm">
+  	<form name="userForm">
+
+  		
+<md-input-container class="md-block" flex-gt-sm>
+<label>{{'username_or_email' | translate }}</label>
+<input required ng-model="user.value">
+<div ng-messages="userForm.value.$error">
+          <div ng-message="required">{{'required_input' | translate}}</div>
+</div>
+</md-input-container>
+
+<md-button class="md-raised md-primary" ng-click="submit(user)">{{'submit' | translate}}</md-button>
+</form>
+</div>
+</md-content>

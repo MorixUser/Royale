@@ -1,0 +1,100 @@
+body {height:100%;font:13px 'PT Sans', Arial, Tahoma, Verdana, Sans-Serif;color:#626363;}
+
+div, html, body, p, ul, ol, li, a, form, img, table, td, h1, h2, h3, h4, h5, h6, blockquote, header, section, footer, aside, nav, article, figure, figcaption, dl, dt, dd {margin:0;padding:0;} 
+header, section, footer, aside, nav, article, figure, figcaption, altmenu{display: block;}
+table {border-collapse:collapse;}
+img {border:none;}
+ul, li {list-style:none;}
+a, a:active, a:visited {text-decoration:none;color:#3fa3c9;}
+a:hover {text-decoration:none;color:#3fa3c9;}
+input:focus, textarea:focus {outline:none;}
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 10.5px;
+}
+
+br {
+  clear: both;
+}
+
+.ui-content {
+  margin: auto;
+  max-width: 800px;
+  padding: 0.8em;
+}
+ 
+
+@media (min-width: 600px) {
+}
+
+.bonuscontainer {
+    /* padding: 10px;
+    width: 98.4%; */
+    overflow: hidden;
+    background-size: 100% 100%;
+}
+
+.bonuscontainer div {
+    float: left;
+    text-align: left;
+    margin-left: 2%;
+}
+
+.bonus-image-container {
+    width: 12%;
+    margin-left: 16% !important;
+}
+
+.bonustitle {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #033a72;
+    margin: 3px;
+    text-indent: 10px;
+    color: white;
+}
+
+.bonusimgage {
+    width: 100%;
+    height: 150px;
+}
+
+.bonustype-FirstPayin-Sportsbook {
+    background: url(https://hotbet777.com/content/design7/Images/bonus/sport-bonus.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.bonus-text-container {
+    width: 92%;
+}
+
+.bonustext {
+    border: 1px solid #033a72;
+    width: 100%;
+}
+.bonuscontainer ul {
+    margin-top: 10px;
+}
+.bonuscontainer li {
+    font-size: 18px;
+	    margin-left: 10px;
+}
+.activatebonusbtn {
+    margin-left: 23px;
+    margin: 16px;
+    float: right;
+    color: black !important;
+    width: 140px;
+}
+.bchide {
+    display: none;
+}
+.bonusconditions {
+    width: 90%;
+}
+.bonusconditions-list li {
+    font-size: 12px;
+}

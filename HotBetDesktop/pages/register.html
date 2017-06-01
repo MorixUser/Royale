@@ -1,0 +1,189 @@
+
+  <md-content layout-padding ng-controller="registerCtrl as register">
+  <div id="registerForm">
+  	<form name="userForm">
+
+          <div style="display:inline-block;width:30%;float:left;margin-right:5%;">
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelGender' | translate}}</label>
+                  <md-select ng-model="user.gender">
+                      <md-option value="male">
+                          {{'male'|translate}}
+                      </md-option>
+                      <md-option value="female">
+                          {{'female'|translate}}
+                      </md-option>
+                  </md-select>
+				  <div ng-messages="userForm.gender.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelFirstName' | translate }}</label>
+                  <input required ng-model="user.firstName">
+                  <div ng-messages="userForm.firstName.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelLastName' | translate}}</label>
+                  <input required ng-model="user.lastName">
+                  <div ng-messages="userForm.lastName.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelStreet' | translate}}</label>
+                  <input required ng-model="user.street">
+                  <div ng-messages="userForm.street.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelPLZ' | translate}}</label>
+                  <input required name="postalCode" ng-model="user.postalCode">
+                  <div ng-messages="userForm.postalCode.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelPlace' | translate }}</label>
+                  <input required ng-model="user.place">
+                  <div ng-messages="userForm.firstName.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{ 'LabelLand' | translate }}*</label>
+                  <md-select required ng-model="user.country">
+                      <md-option ng-repeat="country in countries" value="{{country.Code}}">{{ country.Name }}</md-option>
+                  </md-select>
+                  <div ng-messages="userForm.country.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelNation' | translate}}*</label>
+                  <md-select required ng-model="user.nation">
+                      <md-option ng-repeat="country in countries" value="{{country.Code}}">{{ country.Name }}</md-option>
+                  </md-select>
+                  <div ng-messages="userForm.nation.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+                  <md-input-container class="md-block" flex-gt-sm>
+                      <label>{{'LabelMobile' | translate}}</label>
+                      <input ng-model="user.mobile"></md-datepicker>
+                  </md-input-container>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelCurrency' | translate}}*</label>
+                  <md-select required ng-model="user.currency">
+                      <md-option ng-repeat="currency in currencies" value="{{currency.code}}">{{ currency.name }}</md-option>
+                  </md-select>
+                  <div ng-messages="userForm.currency.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+			  
+              <label style="color: rgba(0, 0, 0, 0.38);">{{'LabelBirthday' | translate}}*</label>
+              <md-datepicker ng-model="user.bdate" md-max-date="maxDate"></md-datepicker>
+			  
+          </div>
+          <div style="display:inline-block;width:30%;float:left;margin-right:5%;">
+              
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelMail' | translate}}</label>
+                  <input required ng-model="user.mail"></md-datepicker>
+                  <div ng-messages="userForm.mail.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelUsername' | translate}}</label>
+                  <input required ng-model="user.username"></md-datepicker>
+                  <div ng-messages="userForm.username.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelPW' | translate}}</label>
+                  <input required type="password" ng-model="user.password"></md-datepicker>
+                  <div ng-messages="userForm.password.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelPW2' | translate}}</label>
+                  <input required type="password" ng-model="user.password2"></md-datepicker>
+                  <div ng-messages="userForm.password2.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelPersQuestion' | translate}}</label>
+                  <md-select required ng-model="user.persq">
+                      <md-option value="1">
+                          {{'mothers_maiden_name'|translate}}
+                      </md-option>
+                      <md-option value="2">
+                          {{'best_friends_name'|translate}}
+                      </md-option>
+                      <md-option value="3">
+                          {{'pets_name'|translate}}
+                      </md-option>
+
+                      <md-option value="4">
+                          {{'favorite_book'|translate}}
+                      </md-option>
+
+                      <md-option value="5">
+                          {{'favorite_hobby'|translate}}
+                      </md-option>
+                  </md-select>
+                  <div ng-messages="userForm.persq.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelPersAnsw' | translate}}</label>
+                  <input required ng-model="user.persa"></md-datepicker>
+                  <div ng-messages="userForm.persa.$error">
+                      <div ng-message="required">{{'required_field'|translate}}</div>
+                  </div>
+              </md-input-container>
+          </div>
+
+
+          <div style="display:inline-block;width:30%;float:left;">
+              <md-input-container class="md-block" flex-gt-sm>
+                  <label>{{'LabelBonusCode' | translate}}</label>
+                  <input ng-model="user.promotioncode"></md-datepicker>
+              </md-input-container>
+
+              <md-input-container class="md-block" flex-gt-sm>
+                  <md-checkbox ng-model="user.agreement" aria-label="Checkbox 1">
+                      {{'LabelOver18' | translate}}<br />
+                      <a ng-click="openTermsAndConditions()">{{'LabelAGB' | translate}}</a>
+                  </md-checkbox>
+              </md-input-container>
+
+              <md-button class="md-raised md-primary" ng-disabled="!user.agreement || !user.persa || !user.persq  || !user.password || !user.password2 || !user.username || !user.bdate || !user.currency || !user.nation || !user.country || !user.place || !user.postalCode || !user.street || !user.lastName || !user.firstName || !user.mail" ng-click="getRegisterUser(user)">{{'submit'|translate}}</md-button>
+          </div>
+</form>
+</div>
+</md-content>

@@ -1,0 +1,48 @@
+<div ng-include src="'pages/navbarInner.html'"></div>
+<md-content layout-padding ng-controller="payoutCtrl as account">
+    <div ng-if="notverified" ng-include="'/info/'+currentLang+'/firstpayout/index.html'" class="info-content"></div>
+
+
+    <div id="registerForm" ng-if="verified">
+
+
+
+        <label class="ptlable">{{'please_enter_amount' | translate}}:</label>
+        <input type="text" id="tbAmount" ng-model="amount" value="0.00" maxlength="8" onfocus="this.select()" />
+
+        <select class="select slc pmtcurrencies" ng-model="selcurrency" ng-change="onCurrencyChangeApco()">
+            <option value="EUR">EUR</option>
+            <option value="TRY">TRY</option>
+            <option value="USD">USD</option>
+        </select>
+
+
+        <div class="pttable" id="lbExchangeMsg">{{exchangeMsg}}</div>
+
+
+        <br />
+        <div class="clearfix"></div>
+
+        <div class="pttable pmtcontainer">
+            <div class="ptradio" ng-repeat="item in paymentMethods" ng-class="{true: 'selected', false:'noselected'}[selectedPayMethod == item.id]">
+                <div class="{{item.pclass}} pmtdiv" ng-click="changeMethod(item.id)">&nbsp;</div>
+
+                <div class="paymentconditiondiv" ng-show="vCondition == item.id">
+                    <div class="pmvheader">
+                        <div class="pmvheadertext">{{'conditions' | translate}}</div>
+                        <div class="pmvheaderclose" ng-click="vCondition=-1;">x</div>
+                    </div>
+                    <div class="pmvcontent">
+                        <div ng-include="item.conditionUrl"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <br />
+        <div class="clearfix"></div>
+
+        <md-button id="btRequestPayin" class="md-raised md-primary" ng-click="ngcheckoutapco()">{{'request' | translate}}</md-button>
+    </div>
+</md-content>

@@ -1,0 +1,155 @@
+<div ng-include src="'pages/navbarInner.html?2'"></div>
+  <md-content ng-controller="betSlipCtrl as betSlip" id="betslip" style="margin-top:0px;">
+  	
+      <div class="slip-overlay stakeinput-overlay hidden">
+          <div class="overlay-content" style="background:white;margin-top:40%;">
+              <div style="width:100%;float:left;border-bottom:1px solid black;color:black;font-size:16px;font-weight:bold;padding:10px;">{{'stake' | translate}}: {{stakeinput1}},{{stakeinput2}}</div>
+              <div style="width:100%;float:left;text-align:center;padding-left:1%;white-space:nowrap;">
+                  <md-button class="md-raised md-primary" flex ng-click="stakeButtonInput('1')" style="font-size: 18px;float:left;width:28%;">1</md-button>
+                  <md-button class="md-raised md-primary" flex ng-click="stakeButtonInput('2')" style="font-size: 18px;float:left;width:28%;">2</md-button>
+                  <md-button class="md-raised md-primary" flex ng-click="stakeButtonInput('3')" style="font-size: 18px;float:left;width:29%;">3</md-button>
+              </div>
+              <div style="width:100%;float:left;text-align:center;padding-left:1%;white-space:nowrap;">
+                  <md-button class="md-raised md-primary" flex ng-click="stakeButtonInput('4')" style="font-size: 18px;float:left;width:28%;">4</md-button>
+                  <md-button class="md-raised md-primary" flex ng-click="stakeButtonInput('5')" style="font-size: 18px;float:left;width:28%;">5</md-button>
+                  <md-button class="md-raised md-primary" flex ng-click="stakeButtonInput('6')" style="font-size: 18px;float:left;width:29%;">6</md-button>
+              </div>
+              <div style="width:100%;float:left;text-align:center;padding-left:1%;white-space:nowrap;">
+                  <md-button class="md-raised md-primary" flex ng-click="stakeButtonInput('7')" style="font-size: 18px;float:left;width:28%;">7</md-button>
+                  <md-button class="md-raised md-primary" flex ng-click="stakeButtonInput('8')" style="font-size: 18px;float:left;width:28%;">8</md-button>
+                  <md-button class="md-raised md-primary" flex ng-click="stakeButtonInput('9')" style="font-size: 18px;float:left;width:29%;">9</md-button>
+              </div>
+              <div style="width:100%;float:left;text-align:center;padding-left:1%;white-space:nowrap;">
+                  <md-button class="md-raised md-primary" flex ng-click="stakeButtonInput(',')" style="font-size: 18px;float:left;width:28%;">,</md-button>
+                  <md-button class="md-raised md-primary" flex ng-click="stakeButtonInput('0')" style="font-size: 18px;float:left;width:28%;">0</md-button>
+                  <md-button class="md-raised md-primary" flex ng-click="stakeButtonInput('C')" style="font-size: 18px;float:left;width:29%;">C</md-button>
+              </div>
+              <div style="width:100%;float:left;text-align:center;">
+                  <md-button class="md-raised md-primary fl" flex ng-click="confirmStakeInput(1)" style="font-size: 14px;width:40%;line-height:20px;white-space:inherit;">{{'perbet' | translate}}</md-button>
+                  <md-button class="md-raised md-primary fr" flex ng-click="confirmStakeInput(2)" style="font-size: 14px;width:50%;line-height:20px;white-space:inherit;">{{'total' | translate }}</md-button>
+              </div>
+          </div>
+      </div>
+  		<div class="slip-overlay livetimer-overlay hidden">
+  			<div class="overlay-content">
+  				<div class="timer-count-txt">{{countDownLeft}}</div>
+  				<div class="timer-logo"></div>
+  			</div>
+  		</div>
+      <div class="slip-overlay authtimer-overlay hidden">
+          <div class="overlay-content">
+              <div class="slip-overlay-txt">{{'authorizing_ticket' | translate}}</div>
+              <div class="timer-logo"></div>
+          </div>
+      </div>
+      <div class="slip-overlay bookingticket-overlay hidden">
+          <div class="overlay-content">
+              <div class="slip-overlay-txt">{{'accounting_ticket' | translate}}</div>
+              <div class="timer-logo"></div>
+          </div>
+      </div>
+      <div class="slip-overlay authresult-overlay hidden">
+          <div class="overlay-content">
+              <div class="authrescontent">
+                  <div class="timer-count-txt" style="font-size:20px;">{{PDComment}}</div>
+                  <div class="timer-count-txt" style="font-size:20px;">{{PDStakeNotification}}</div>
+
+                  <div class="timer-count-txt" style="font-size:20px;">{{PDPrintTimeoutTime}}</div>
+                  <div>
+                      <md-button class="md-raised md-primary" style="width: 95%;" type="button" ng-click="CloseTicketAuth('',true)">{{'RESETTXT' | translate}}</md-button>
+                      <md-button class="md-raised md-primary" style="width: 95%;" type="button" ng-click="BookAuthTicket()">{{'SUBMITTXT' | translate}}</md-button>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+      <div class="tips-container">
+        <div ng-repeat="item in betslipitems">
+            <div layout="column" class="tc slip-date">
+                    
+                   
+            </div>
+            <div class="bs-gameheader">
+
+                <h4 class="tl" ng-class="item.FMann2 == '' ? 'bs-teamname-outright' : 'bs-teamname'"><div>{{item.FMann1}}</div></h4>
+
+                <div class="tc bs-game-stats" ng-class="item.FMann2 == '' ? 'bs-game-stats-outright' : ''">
+                    <div><span class="slip-date">{{item.FSpieldatum | slipDateFilter }}</span></div>
+                    <div class="bs-score">{{item.FSpielstand}}</div>
+                </div>
+                <h4 class="tc bs-teamname" ng-if="item.FMann2 && item.FMann2 != ''"><div>{{item.FMann2}}</div></h4>
+                <h4 class="tl bankbtn" ng-show="currentTicketType==1"><i class="material-icons bs-bankbtn" ng-click="changeBank(item.GameID, item.FBank)" ng-class="{J: 'bankactive', N: 'inactive'}[item.FBank]" style="margin-left: 2px !important;">format_bold</i></h4>
+                <div ng-hide="currentTicketType==1" style="width:26px;padding:0;">&nbsp;</div>
+            </div>
+            <md-divider inset></md-divider>
+         <div>
+             <div ng-repeat="tips in item.FTips" class="betslip-tiprow" ng-class="['even', 'odd'][$index %2]">
+                 <div class="slip-tipp">
+                     <div class="slip-odd fl {{tips.Active}}"><span ng-if="tips.Active">{{tips.Odd | oddFilter }}</span><span ng-if="!tips.Active">&nbsp;</span></div> <span class="slip-tiptxt"> &nbsp; {{ tips.TipText }} </span>
+                     <div class="fr bs-tipdel">  <i class="material-icons" ng-click="deleteTip(tips.TipID)">delete_forever</i>  </div>
+                     <div class="clearfix"></div>
+                 </div>
+
+             </div> 
+            
+         </div>
+         <div class="clearfix"></div>
+          <md-divider inset></md-divider>
+         <div class="clearfix"></div>
+         
+          
+       </div>
+       
+     </div>
+      <div class="bs-bottom">
+          <md-subheader ng-click="systemvis = !systemvis" ng-animate="{show: 'menu-show', hide: 'menu-hide'}" style="padding: 5px !important;">
+              <span ng-if="currentTicketType==-1">{{'singleBet' | translate}}</span>
+              <span ng-if="currentTicketType==0">{{'comboBet' | translate}}</span>
+              <span ng-if="currentTicketType==1">{{'systemBet' | translate}}</span>
+              <span class="fr" style="margin-top:-5px;">
+                  <i class="material-icons" ng-show="systemvis">keyboard_arrow_up</i>
+                  <i class="material-icons" ng-show="!systemvis">keyboard_arrow_down</i>
+              </span>
+          </md-subheader>
+          <md-subheader ng-click="setTicketType(-1)" ng-show="systemvis" ng-class="{'selected':currentTicketType==-1}">{{'singleBet' | translate}}</md-subheader>
+          <md-subheader ng-click="setTicketType(0)" ng-show="systemvis" ng-class="{'selected':currentTicketType==0}">{{'comboBet' | translate}}</md-subheader>
+          <md-subheader ng-click="setTicketType(1)" ng-show="systemvis" ng-class="{'selected':currentTicketType==1}">{{'systemBet' | translate}}</md-subheader>
+          <div class="systems-container" ng-show="currentTicketType==1 && !systemvis">
+              <div ng-repeat="item in systemItems" ng-click="selectSystem(item)" class="system-box" ng-class="isSystemSelected(item)?'checkbox-selected':'checkbox-empty'">{{item}}/{{systemItems.length}}</div>
+          </div>
+
+          <md-subheader class="md-primary">
+              <span class="fl">{{'stake' | translate }}:</span>
+              <span class="fr" ng-if="!useownstakeinput">
+                  <input type="number" ng-model="stakeNumber" step="0.5" min="0" class="stake-input" ng-click="selectStake()" id="stake-input">
+              </span>
+              <span class="fr" ng-if="useownstakeinput" ng-click="selectStake()" style="background: white; color: black; padding: 4px; width: 60px; text-align: right; border-radius: 3px;">
+                  {{stakeNumber}}
+              </span>
+              <div class="clearfix"></div>
+          </md-subheader>
+          <md-subheader class="md-primary" ng-show="fee && fee != '0,00'">{{'Fee' | translate}}: {{fee}}</md-subheader>
+
+          <md-subheader class="md-primary">{{'totalStake' | translate }}:  <span class="fr">{{cntBets}} x {{StakePerBet}} = {{TotalStake}}</span></md-subheader>
+
+          <md-subheader class="md-primary">{{'totalQuote' | translate}}: <span class="fr">{{TotalOdd}}</span></md-subheader>
+
+          <md-subheader class="md-primary" ng-if="Bonus && Bonus>0">{{'Bonus' | translate}}: <span class="fr">{{Bonus  | decimalFilter}}</span></md-subheader>
+
+          <md-subheader class="md-primary">{{'maxWinning' | translate}}: <span class="fr">{{MaxWin}}</span></md-subheader>
+
+
+          <div class="button-container">
+              <div class="bet-clear-btn fl">
+                  <md-button class="md-raised md-primary" flex ng-click="clearBetSlip()"><i class="material-icons" ng-click="deleteGame(item.GameID)">delete_forever</i>  </md-button>
+              </div>
+              <div class="bet-submit-btn fr" style="text-align:center;">
+
+                  <md-button class="md-raised md-primary" flex ng-click="placeBet()" style="font-size: 18px;">
+                      {{'placeBet' | translate}}
+                  </md-button>
+              </div>
+          </div>
+          <div class="clearfix"></div>
+      </div>
+</md-content>

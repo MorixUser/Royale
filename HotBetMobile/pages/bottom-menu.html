@@ -1,0 +1,27 @@
+<footer>
+    <div class="bottom-menu" layout ng-controller="bottommenuCtrl as bottommenuCtrl">
+
+        <div flex class="bottom-menu-el" ng-click="navto('hbsport')">
+            <div class="bottom-icon sportbets-icon"></div>
+            {{'SPORTS' | translate}}
+        </div>
+        <div flex ng-if="usecasino && casinoallowed" class="bottom-menu-el" ng-click="navto('casino')">
+            <div class="bottom-icon casino-icon"></div>
+            {{'Casino' | translate}}
+        </div>
+        <div flex class="bottom-menu-el" ng-click="navto('account')" ng-show="isLoggedin">
+            <div class="account-balance" >{{userBalance}}</div>
+            <div class="bottom-icon account-icon"></div>
+            {{'navAccount' | translate }}
+        </div>
+        <div flex class="bottom-menu-el" ng-click="navto('login')" ng-hide="isLoggedin">
+            <div class="bottom-icon account-icon"></div>
+            {{'login' | translate }}
+        </div>
+		<div flex class="bottom-menu-el" ng-click="navto('hbbetslip')">
+            <div class="bottom-icon betslip-icon"></div>
+            <div class="account-balance" ng-show="betslipiteml > 0">{{betslipiteml}}</div>
+            {{'navSlip' | translate}}
+        </div>
+    </div>
+</footer>

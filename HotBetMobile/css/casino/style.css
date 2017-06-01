@@ -1,0 +1,187 @@
+﻿.casino-spike {
+ width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 10px 10px 10px;
+margin-top:-10px;
+border-color: transparent transparent #ad0051 transparent;
+}
+#wrap {
+    overflow: hidden;
+}
+input,
+textarea {
+  font-size: 16px;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+.switch-lang .current {
+    width: 130px;
+    height: 25px;
+    border-radius: 3px;
+    background: #cccccc url(images/icon-arrow.png) no-repeat 93%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-top: 1px solid #707070;
+    position: relative;
+    cursor: pointer;
+}
+
+.switch-lang .current .lang-image {
+    float: left;
+    width: 30px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.switch-lang .current .lang-image img {
+    width: 16px;
+    height: 11px;
+}
+
+.switch-lang .current {
+    width: 44px !important;
+    height: 29px !important;
+    background: #313131 !important;
+    padding: 4px 7px;
+    border-top: 1px solid #000 !important;
+}
+
+.switch-lang {
+    position: static !important;
+}
+
+
+.switch-lang {
+    float: initial !important;
+    margin-top: 30px !important;
+    margin-left: 18px !important;
+}
+
+#language {
+    width: 19%;
+}
+
+#mobile-footer {
+	width:100%;
+    background:#000;
+	border-top:1px solid #ad0051;
+    text-align: center;
+        padding-top: 20px;
+    padding-bottom: 30px;
+}
+#mobile-footer ul{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+#mobile-footer li{
+        color: white;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    display: inline-block;
+    width: 100px;
+}
+
+.content-casino{width: 100%;
+    padding-left: 10px;}
+
+.casino.egt {
+        background-image: url('../img/casino-icon/egt.png');
+    background-size: 30% 85%;
+    color: red;
+    font-weight: bold;
+    background-repeat: no-repeat;
+        background-position: 71px 3px;
+}
+
+.casino.yggdrasil {
+        background-image: url('../img/casino-icon/yggdrasil.png');
+    background-size: 17% 85%;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-position: 11px 2px;
+}
+
+.casino.netent {
+    background-image: url('../img/casino-icon/netent.png');
+    background-size: 85% 90%;
+    font-weight: bold;
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: 13px 2px;
+}
+
+.casino.playson {
+    background-image: url('../img/casino-icon/playson.png');
+    background-size: 15% 80%;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-position: 13px 2px;
+}
+
+.casino.portomaso {
+    background-image: url('../img/casino-icon/pg.png');
+    background-size: 15% 80%;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-position: 13px 2px;
+}
+
+.mgalogo{
+    background: url('../img/casino-icon/mga.png') no-repeat;
+    background-size: 100% 100%;
+    height: 25px;
+    width: 60px;
+    display: inline-block;
+}
+.ssl{
+    background: url('../img/casino-icon/ssl2.png') no-repeat;
+    background-size: 100% 100%;
+    height: 25px;
+    width: 30px;
+    display: inline-block;
+}
+.gt{
+    background: url('../img/casino-icon/gt.png') no-repeat;
+    background-size: 100% 100%;
+    height: 25px;
+    width: 30px;
+    display: inline-block;
+}
+
+.betapplogo{
+    background: url('../img/logo.png') no-repeat;
+    background-size: 100% 100%;
+    height: 25px;
+    width: 30px;
+    display: inline-block;
+}
+
+.casino-common-cont {
+    padding: 0px !important;
+}
+.casino-content-games{
+        padding: 8px !important;
+    width: 100%;
+}
+.casino-content-info{
+        padding: 0px !important;
+    width: 95%;
+        padding-left: 10px !important;
+}
+
+#mobile-content {
+    width: 100%;
+    background: black;
+    padding-bottom: 15px;
+}
+
+.casino-container{
+       /* border-bottom: 2px solid #ad0051;*/
+}

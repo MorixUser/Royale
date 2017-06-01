@@ -1,0 +1,11 @@
+<header id="appPageHeader2" data-role="header oh" data-theme="b" class="ui-no-background  ui-header ui-bar-b barheight"
+        ng-class="header3 ? 'navbarinner2' : 'navbarinner'"
+        ng-controller="navbarInnerCtrl as nav2">
+    <div class="back-button fl" ng-if="!searchMode" ng-click="goPrevState()"></div>
+    <div class="back-button fl" ng-if="searchMode" ng-click="closeSearch()"></div>
+    <div class="page-name2">{{currentPage}}</div>
+    <div ng-if="showTournamentNav" ng-click="prevTournament()" class="prev-button tournavbtn"></div>
+    <div ng-if="showTournamentNav" ng-click="nextTournament()" class="next-button tournavbtn" style="right:10px;"></div>
+    <div class="clearfix"></div>
+</header>
+ <div class="header2-padding"></div>

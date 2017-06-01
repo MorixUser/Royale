@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HotBetDesktop", "http://localhost:39941", "{A37B0E7F-715F-4347-B8C8-8867757A6829}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_39941"
+		Debug.AspNetCompiler.PhysicalPath = "HotBetDesktop\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_39941\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_39941"
+		Release.AspNetCompiler.PhysicalPath = "HotBetDesktop\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_39941\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "HotBetDesktop\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HotBetMobile", "http://localhost:39962", "{9CC50181-4A47-444B-91CD-DDE21976D4CF}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_39962"
+		Debug.AspNetCompiler.PhysicalPath = "HotBetMobile\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_39962\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_39962"
+		Release.AspNetCompiler.PhysicalPath = "HotBetMobile\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_39962\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "HotBetMobile\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A37B0E7F-715F-4347-B8C8-8867757A6829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A37B0E7F-715F-4347-B8C8-8867757A6829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A37B0E7F-715F-4347-B8C8-8867757A6829}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A37B0E7F-715F-4347-B8C8-8867757A6829}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9CC50181-4A47-444B-91CD-DDE21976D4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC50181-4A47-444B-91CD-DDE21976D4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC50181-4A47-444B-91CD-DDE21976D4CF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC50181-4A47-444B-91CD-DDE21976D4CF}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

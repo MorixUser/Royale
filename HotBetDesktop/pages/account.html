@@ -1,0 +1,26 @@
+
+<div class="accountmenuContainer">
+
+    
+    <div class="accountmenuItem {{currentPage=='pages/history.html' ? 'active' : ''}}" ng-if="usertype==3" ng-click="setPage('pages/history.html')">
+        {{'navigationAccounthistory' | translate}}
+    </div>
+    <div class="accountmenuItem {{currentPage=='pages/changepw.html' ? 'active' : ''}}" ng-if="usertype==3" ng-click="setPage('pages/changepw.html')">
+        {{'navigationAccountdata' | translate}}
+    </div>
+    <div class="accountmenuItem {{currentPage=='pages/accountdata.html' ? 'active' : ''}}" ng-if="usertype==3" ng-click="setPage('pages/accountdata.html')">
+        {{'navigationUserdata' | translate}}
+    </div>
+    <div class="accountmenuItem {{currentPage=='pages/personallimits.html' ? 'active' : ''}}" ng-if="usertype==3" ng-click="setPage('pages/personallimits.html')">
+        {{'personallimits' | translate}}
+    </div>
+    <div class="accountmenuItem {{currentPage=='pages/payinpage.html' ? 'active' : ''}}" ng-if="onlinepayment && payinallowed && usertype==3" ng-click="setPage('pages/payinpage.html')">
+        {{'navigationPayin' | translate}}
+    </div>
+    <div class="accountmenuItem {{currentPage=='pages/payoutpage.html' ? 'active' : ''}}" ng-if="onlinepayment && payoutallowed && usertype==3" ng-click="setPage('pages/payoutpage.html')">
+        {{'navigationPayout' | translate}}
+    </div>
+    
+    
+</div>
+<div class="accountContent" ng-include="currentPage"></div>

@@ -1,0 +1,24 @@
+<div ng-controller="pwrecoverCtrl">
+    <md-content layout-padding>
+        <div id="loginForm">
+            <form name="userForm">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>{{'LabelNewPW' | translate}}</label>
+                    <input type="password" required ng-model="user.pw1">
+                    <div ng-messages="userForm.pw1.$error">
+                        <div ng-message="required">{{'required_input' | translate}}</div>
+                    </div>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>{{'LabelNewPW2' | translate }}</label>
+                    <input type="password" required ng-model="user.pw2">
+                    <div ng-messages="userForm.password.$error">
+                        <div ng-message="required">{{'required_input' | translate}}</div>
+                    </div>
+                </md-input-container>
+                <md-button class="md-raised md-primary" ng-click="getChangePassword(user)">{{'numOk' | translate}}</md-button>
+            </form>
+        </div>
+    </md-content>
+</div>
